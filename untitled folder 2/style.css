@@ -1,0 +1,111 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/*
+  These grid-area names are already done for you.
+  Your main job is to finish the grid container below.
+*/
+.header {
+  grid-area: heading;
+  background-color: #cfe2ff;
+  padding: 20px;
+  border: 2px solid #333;
+}
+
+.nav {
+  grid-area: menu;
+  background-color: #ffe5b4;
+  padding: 20px;
+  border: 2px solid #333;
+}
+
+.main {
+  grid-area: content;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #333;
+}
+
+.aside {
+  grid-area: right;
+  background-color: #e2d5ff;
+  padding: 20px;
+  border: 2px solid #333;
+}
+
+.footer {
+  grid-area: contact;
+  background-color: #d4edda;
+  padding: 20px;
+  border: 2px solid #333;
+}
+
+/*
+  TODO:
+  Turn this into a grid container.
+
+  Helpful reminders:
+  - Use display: grid;
+  - Use grid-template-columns to control column sizes
+  - Use grid-template-areas to place each section
+  - Use gap to create spacing
+
+  Hint 1:
+  The menu should be narrower than the main content.
+
+  Hint 2:
+  One possible column setup is:
+  1fr 3fr 2fr
+
+  Hint 3:
+  The rows should look like this shape:
+
+  "heading heading heading"
+  "menu content right"
+  "menu contact contact"
+
+  That means:
+  - header goes across the top
+  - menu stays on the left
+  - main is in the middle
+  - aside is on the right
+  - footer stretches across the bottom under main + aside
+*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-areas:
+    "heading heading heading"
+    "menu content right"
+    "menu contact contact";
+  gap: 20px;
+}
+
+/* Simple spacing */
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
